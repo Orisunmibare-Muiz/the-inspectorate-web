@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: clarendon-blk-bt;
+    src: url(/fonts/clarendon-blk-bt/Clrndnk.ttf);
+}
+@font-face {
+    font-family: DM_Sans-Static;
+    src: url(/fonts/DM_Sans/static/DMSans-Black.ttf);
+}
+@font-face {
+    font-family: DM_Sans;
+    src: url(/fonts/DM_Sans\,Rubik/static/DMSans-Bold.ttf);
+}
+
+
+.header-fonts {
+    font-family: clarendon-blk-bt;
+}
+
+.letter-fonts {
+    font-family: DM_Sans;
+}
+
+.letter-fonts-2 {
+    font-family: DM_Sans-Static;
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* moving shadow container */
+.moving-shadow-container {
+  position: relative;
+  background: #0d0132;
+  padding: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.moving-shadow-container::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle,
+    rgba(229, 2, 2, 0) 0%,
+    rgba(103, 103, 103, 0.414) 30%,
+    transparent 100%
+  );
+  animation: slowGlow 12s linear infinite;
+}
+
+@keyframes slowGlow {
+  0% {
+    transform: translateX(-30%) translateY(-30%);
+  }
+  50% {
+    transform: translateX(30%) translateY(30%);
+  }
+  100% {
+    transform: translateX(-30%) translateY(-30%);
+  }
+}
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
