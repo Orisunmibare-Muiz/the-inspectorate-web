@@ -19,57 +19,107 @@ export default function Hero() {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800">
+            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 mt-17">
 
                 {/* Hero Section */}
-                <section className="h-[100vh] mt-20" style={{ backgroundImage: `url(${HeroSlideData[heroSlide].image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className='bg-gradient-to-r from-[#01013cf4] from-40% to-[#ffffff00] 20% w-full h-full flex flex-col md:flex-row items-center justify-between px-12 py-20 bg-cover bg-center rounded-lg shadow-lg'>
-                        <div className='max-w-370 mx-auto w-full h-full flex flex-col justify-center'>
-                            <div className="max-w-200 outline-white outline-1 flex flex-col items-center">
-                                <div className='flex flex-row justify-center outline-1 outline-white mb-4'>
-                                    <img src={logoHero} alt="The Inspectorate Logo w-180 h-180" />
-                                </div>
-                                <h2 className="text-[20px] font-extrabold text-[white] leading-snug letter-fonts-2">
-                                    Quality and Growth <span className="text-red-600">Redefined</span> <span className='header-fonts text-[13px]'>for Schools</span>
-                                </h2>
-                                <p className="mt-4 text-[white]">
-                                    Expert guidance in inspection and improvement to elevate educational outcomes.
-                                </p>
-                                <div className="mt-6 flex space-x-4">
-                                    <button className="bg-red-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-red-700 transition">
-                                        Request Inspection
-                                    </button>
-                                    <button className="border border-red-600 text-red-600 px-6 py-3 rounded-md font-semibold hover:bg-red-50 transition">
-                                        Learn More
-                                    </button>
-                                </div>
+                <section className="relative h-screen overflow-hidden">
+
+                    {/* Hero Slides */}
+                    {HeroSlideData.map((slide, index) => (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 ease-in-out
+                            ${index === heroSlide ? "opacity-100" : "opacity-0"}`}
+                            style={{ backgroundImage: `url(${slide.image})` }}
+                        />
+                    ))}
+
+                    {/* Overlay with content */}
+                    <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center md:item:start md:justify-start px-6 sm:px-12 lg:px-14 py-16 md:py-24 bg-gradient-to-r"
+                        style={{
+                            background: 'linear-gradient(to right, rgba(1,1,110,0.96) 25%, rgba(255,255,255,0) 100%)'
+                        }}>
+
+                        <div className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
+
+                            {/* Logo */}
+                            <div className="mb-6">
+                                <img src={logoHero} alt="The Inspectorate Logo" className="w-48 sm:w-56 md:w-64 lg:w-100" />
                             </div>
+
+                            {/* Heading/Tagline */}
+                            <p className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold leading-snug letter-fonts-2 md:text-center">
+                                PARTNER WITH THE INSPECTORATE FOR QUALITY ASSURANCE AND ENVIABLE SCHOOL GROWTH.
+                            </p>
+
+                            <p className='text-[white] text-[18px] font-semibold'>
+                                Expert Support for Quality Academic Operations Yielding Enviable Growth.
+                            </p>
+
+                            {/* Buttons */}
+                            <div className="mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+                                <button className="bg-red-600 text-white px-15 py-3 rounded-md font-semibold hover:bg-red-700 transition w-full sm:w-auto">
+                                    Request Partnership
+                                </button>
+                                <button className="border border-red-600 text-red-600 px-15 py-3 rounded-md font-semibold hover:bg-red-50 transition w-full sm:w-auto">
+                                    Learn More
+                                </button>
+                            </div>
+
                         </div>
+
                     </div>
                 </section>
 
                 {/* Framework Section */}
-                <div className="px-12 py-16">
-                    <div className='max-w-370 mx-auto  bg-[#e3e3e3] py-6 px-6 rounded-lg'>
-                        <h3 className="text-5xl font-bold text-[#01013cf4]mb-8 text-center mb-5 letter-fonts-2">Our School Inspection Framework</h3>
-                        <div className="grid md:grid-cols-4 gap-8">
-                            <div className="p-6  rounded-lg shadow-sm hover:shadow-md transition">
-                                <h4 className="text-lg font-semibold text-[#01013cf4]">🔴 Pedagogical Excellence</h4>
-                                <p className="mt-2 [#01013cf4] ml-7 text-[15px]">Ensuring effective teaching practices and improved learning outcomes.</p>
+                <div className="px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
+
+                    <div className="max-w-7xl mx-auto bg-[#e3e3e3] py-8 sm:py-10 px-4 sm:px-6 lg:px-10 rounded-lg  max-w-370 mx-auto">
+
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#01013cf4] text-center mb-8">
+                            Our School Inspection Framework
+                        </h3>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+
+                            <div className="p-5 sm:p-6 md:px-4 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                                <h4 className="text-base sm:text-lg font-semibold text-[#01013cf4]">
+                                    🔴 Pedagogical Excellence
+                                </h4>
+                                <p className="mt-3 text-[#01013cf4] text-sm sm:text-[15px] leading- font-semibold md:ml-7">
+                                    Ensuring effective, creative and modern teaching practices and highly improved learning outcomes within a safe, conducive and secure learning environment.
+                                </p>
                             </div>
-                            <div className="p-6  rounded-lg shadow-sm hover:shadow-md transition">
-                                <h4 className="text-lg font-semibold text-[#01013cf4]">🔴 Administrative Efficiency</h4>
-                                <p className="mt-2 [#01013cf4] ml-7 text-[15px]">Strengthening school leadership, management systems, and operational performance.</p>
+
+                            <div className="p-5 sm:p-6 md:px-4 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                                <h4 className="text-base sm:text-lg font-semibold text-[#01013cf4]">
+                                    🔴 School Growth
+                                </h4>
+                                <p className="mt-3 text-[#01013cf4] text-sm sm:text-[15px] leading-relaxed font-semibold md:ml-7">
+                                    Ensure learning and communication outcomes that promote student retention and positive references; introduce and promote latest trends in school marketing for unusual growth.
+                                </p>
                             </div>
-                            <div className="p-6  rounded-lg shadow-sm hover:shadow-md transition">
-                                <h4 className="text-lg font-semibold text-[#01013cf4]">🔴 Talent Advisory</h4>
-                                <p className="mt-2 [#01013cf4] ml-7 text-[15px]">Support for staff recruitment and retention.</p>
+
+                            <div className="p-5 sm:p-6 md:px-4 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                                <h4 className="text-base sm:text-lg font-semibold text-[#01013cf4]">
+                                    🔴 Administrative Efficiency
+                                </h4>
+                                <p className="mt-3 text-[#01013cf4] text-sm sm:text-[15px] leading-relaxed font-semibold md:ml-7">
+                                    Strengthening school leadership, management systems and operational efficiency with a touch of professionalism.
+                                </p>
                             </div>
-                            <div className="p-6  rounded-lg shadow-sm hover:shadow-md transition">
-                                <h4 className="text-lg font-semibold text-[#01013cf4]">🔴 School Growth</h4>
-                                <p className="mt-2 [#01013cf4] ml-7 text-[15px]">Preparing schools to meet national education standards and compliance requirements.</p>
+
+                            <div className="p-5 sm:p-6 md:px-4 rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                                <h4 className="text-base sm:text-lg font-semibold text-[#01013cf4]">
+                                    🔴 Rebranded Faculty
+                                </h4>
+                                <p className="mt-3 text-[#01013cf4] text-sm sm:text-[15px] leading-relaxed font-semibold md:ml-7">
+                                    Engage teaching staff with first class professional development programs for highly improved instructional delivery and customer satisfaction.
+                                </p>
                             </div>
+
                         </div>
+
                     </div>
                 </div>
 
