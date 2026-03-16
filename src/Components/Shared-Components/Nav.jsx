@@ -8,7 +8,7 @@ export default function Nav() {
         <>
             <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
 
-                <div className="flex justify-between items-center px-6 md:px-0 py-4 max-w-370 mx-auto">
+                <div className="flex justify-between items-center px-6 md:px-0 md:py-2 py-4 max-w-370 mx-auto">
 
                     {/* Logo + Brand */}
                     <a href="/" className="flex items-center gap-2">
@@ -21,7 +21,7 @@ export default function Nav() {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-8 text-sm font-medium">
 
-                        {["Home", "About the Inspectorate", "Services", "Curriculum", "Contact"].map((item, index) => (
+                        {["Home", "About us", "Our School Inspection Framework", "Services", "Contact"].map((item, index) => (
                             <a key={index} href="#" className="relative group">
                                 {item}
                                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
@@ -31,7 +31,7 @@ export default function Nav() {
 
                     {/* Desktop CTA */}
                     <button className="hidden md:block bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition">
-                        REQUEST INSPECTION
+                        REQUEST PARTNERSHIP
                     </button>
 
                     {/* Mobile Menu Button */}
@@ -51,8 +51,8 @@ export default function Nav() {
                         <nav className="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
 
                             <a href="#" className="hover:text-red-600">Home</a>
-                            <a href="#" className="hover:text-red-600">About the Inspectorate</a>
-                            <a href="#" className="hover:text-red-600">Services</a>
+                            <a href="#" className="hover:text-red-600">About us</a>
+                            <a href="#" className="hover:text-red-600">Our School Inspection Framework</a>
                             <a href="#" className="hover:text-red-600">Curriculum</a>
                             <a href="#" className="hover:text-red-600">Contact</a>
 

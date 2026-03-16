@@ -65,3 +65,24 @@
 /* -------------------------------------------- */
 /* -------------------------------------------- */
 /* -------------------------------------------- */
+
+/* Hero Slide Animation */
+.hero-slide {
+  transition: opacity 5s ease-in-out; /* 2s fade */
+  opacity: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Carousel Container Animation */
+.carousel-container {
+  display: flex;
+  transition: transform 5s ease-in-out; /* 2s slide */
+}
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
