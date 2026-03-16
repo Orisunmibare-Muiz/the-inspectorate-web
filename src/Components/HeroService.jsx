@@ -2,6 +2,7 @@ import React from 'react'
 import { HeroServiceData, HeroServiceOtherData } from '../Data/HeroServiceData';
 import { ventures } from '../Data/HeroServiceData';
 import logo from '/logo.png'
+import supposedSVG from '/Professional-person .png'
 
 export default function HeroService() {
     return (
@@ -11,20 +12,23 @@ export default function HeroService() {
                 {/* HERO SECTION */}
 
                 <section className=" text-white" style={{ backgroundImage: `url(${logo})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className="bg-gradient-to-b from-[#01016ef5] from-25% to-transparent md:bg-gradient-to-r py-20 h-[70vh]">
-                        <div className="max-w-370 mx-auto px-6 md:px-0 border">
+                    <div className="bg-gradient-to-b from-[#01016ef5] from-15% via-[#ffffffe4] to-transparent md:bg-gradient-to-r py-20 h-[70vh]">
+                        <div className="max-w-370 mx-auto px-6 md:px-0">
 
                             <h1 className="text-4xl md:text-6xl font-bold mt-14 mb-4">
-                                Partnership <span className=''>& Venture Services</span>
+                                Partnership & <span className='text-[#01016ef5]'>Venture Services</span>
                             </h1>
 
-                            <p className="text-lg text-gray-200 max-w-xl">
+                            <p className="font-bold text-[30px] text-gray-200 max-w-xl">
                                 Empowering Schools for Lasting Excellence and Growth
                             </p>
-
                         </div>
                     </div>
                 </section>
+
+                <div className='absolute top-4.5 -right-15 rounded-[20px]'>
+                    <img src={supposedSVG} alt="" className='w-185' />
+                </div>
 
 
                 {/* PARTNERSHIP SERVICES */}
@@ -87,7 +91,7 @@ export default function HeroService() {
                     <div className="max-w-7xl mx-auto px-6">
 
                         <h2 className="text-3xl font-bold mb-12 text-center">
-                            Our Ventures
+                                OUR VENTURES
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -117,7 +121,7 @@ export default function HeroService() {
 
                                     </div>
                                 );
-                            })}
+                            })} 
 
                         </div>
 
