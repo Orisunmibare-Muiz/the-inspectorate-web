@@ -37,7 +37,7 @@ export default function Hero() {
                     {/* Overlay with content */}
                     <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center md:item:start md:justify-start px-6 sm:px-12 lg:px-14 py-16 md:py-24 bg-gradient-to-r"
                         style={{
-                            background: 'linear-gradient(to right, rgba(1,1,110,0.96) 25%, rgba(255,255,255,0) 100%)'
+                            background: 'linear-gradient(to right, #01016ef5 25%, rgba(255,255,255,0) 100%)'
                         }}>
 
                         <div className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
