@@ -35,9 +35,9 @@ export default function Hero() {
                     ))}
 
                     {/* Overlay with content */}
-                    <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center md:item:start md:justify-start px-6 sm:px-12 lg:px-14 py-16 md:py-24 bg-gradient-to-r"
+                    <div className="relative w-full h-full flex flex-col md:flex-row items-center justify-center md:item:start md:justify-start px-6 sm:px-12 lg:px-14 py-16 md:py-24"
                         style={{
-                            background: 'linear-gradient(to right, #01016ef5 25%, rgba(255,255,255,0) 100%)'
+                            background: 'linear-gradient(to right, #090024 25%, rgba(255,255,255,0) 100%)'
                         }}>
 
                         <div className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
@@ -124,7 +124,7 @@ export default function Hero() {
                 </div>
 
                 {/* Stats Section */}
-                <section className="px-12 py-16 bg-gradient-to-r from-gray-50 to-gray-100">
+                <section className="px-12 py-16">
                     <div className="grid md:grid-cols-3 gap-8 text-center moving-shadow-container max-w-370 z-20 mx-auto">
                         <div className=''>
                             <p className="text-5xl font-bold text-white">25<span className='text-red-500 text-[60px]'>+</span></p>
