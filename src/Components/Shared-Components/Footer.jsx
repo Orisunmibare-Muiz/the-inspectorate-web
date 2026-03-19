@@ -4,7 +4,7 @@ import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/
 export default function Footer() {
     return (
         <div>
-            <footer className="bg-[#01016ef5] text-gray-300 mt-20">
+            <footer className="bg-[#090024] text-gray-300 mt-20">
 
                 <div className="max-w-370 mx-auto px-6 py-16 grid md:grid-cols-4 gap-12">
 
