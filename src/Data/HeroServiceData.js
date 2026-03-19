@@ -1,57 +1,121 @@
 import {
-  FaChalkboardTeacher,
   FaClipboardCheck,
-  FaUserGraduate,
-  FaUsers,
+  FaChalkboardTeacher,
   FaBook,
+  FaGlobe,
+  FaUsers,
+  FaChartLine,
+  FaUserGraduate,
+  FaMoneyBillWave,
+  FaUserCheck,
+  FaTools,
+  FaTelegramPlane,
+  FaHeart,
   FaShieldAlt,
+  FaCogs,
+  FaUserTie,
   FaBus,
   FaPrint,
-  FaUserTie,
   FaBullhorn,
+  FaBalanceScale,
+  FaHandsHelping,
+  FaBuilding,
+  FaSchool,
 } from "react-icons/fa";
 
 export const HeroServiceData = [
   {
     icon: FaClipboardCheck,
     title: "School Inspection",
-    desc: "Environment, facilities, classroom observation, resource centres and pedagogical review.",
+    desc: "Environment, facilities, classroom observation, resource centres, instructional delivery, statutory records and pedagogical overview.",
   },
   {
     icon: FaChalkboardTeacher,
     title: "Professional Development",
-    desc: "Round-the-clock professional training for school staff both online and onsite.",
+    desc: "Round-the-clock professional development for staff, available both online and onsite.",
   },
   {
     icon: FaBook,
     title: "Curriculum Audit",
-    desc: "Comprehensive evaluation of school curriculum and academic delivery.",
+    desc: "Comprehensive review and evaluation of school curriculum and academic delivery systems.",
+  },
+  {
+    icon: FaGlobe,
+    title: "Program Onboarding",
+    desc: "Introduction and onboarding of world-class educational programs for schools.",
   },
   {
     icon: FaUsers,
-    title: "Parent & Student Engagement",
-    desc: "Communication systems and retention strategies for students and parents.",
+    title: "Parent & Student Communication",
+    desc: "Effective communication systems and retention models for parents and students.",
+  },
+  {
+    icon: FaChartLine,
+    title: "School Growth Mechanism",
+    desc: "Strategic frameworks designed to drive institutional growth and long-term success.",
   },
   {
     icon: FaUserGraduate,
     title: "Academic Enhancement Blueprint",
-    desc: "Structured academic improvement plans designed for long-term school success.",
+    desc: "Structured academic improvement plans to boost performance and excellence.",
   },
   {
-    icon: FaShieldAlt,
-    title: "Regulatory Compliance Audit",
-    desc: "Support and guidance to ensure schools meet regulatory requirements.",
+    icon: FaMoneyBillWave,
+    title: "School Fee Drive",
+    desc: "Professional strategies for improving school fee collection and financial sustainability.",
+  },
+  {
+    icon: FaUserCheck,
+    title: "Staff Appraisal",
+    desc: "Comprehensive staff evaluation systems to improve performance and accountability.",
+  },
+  {
+    icon: FaTools,
+    title: "Teacher & Student Resources",
+    desc: "Provision and advisory on essential teaching and learning resources.",
+  },
+  {
+    icon: FaTelegramPlane,
+    title: "360° Academic Platform",
+    desc: "Partner onboarding on our 360° Academic Enhancement Platform (Telegram).",
+  },
+  {
+    icon: FaHeart,
+    title: "Pastoral Overview",
+    desc: "Student and staff welfare systems, including pastoral care and support structures.",
   },
 ];
 
 export const HeroServiceOtherData = [
   {
+    icon: FaBalanceScale,
     head: "Regulatory Compliance Audit",
     para: "Support and guidance to ensure schools meet regulatory requirements.",
   },
   {
+    icon: FaHandsHelping,
     head: "Regulatory Compliance Audit",
     para: "Support and guidance to ensure schools meet regulatory requirements.",
+  },
+  {
+    icon: FaShieldAlt,
+    head: "Regulatory Compliance",
+    para: "Audit and support to ensure full compliance with educational regulatory bodies.",
+  },
+  {
+    icon: FaCogs,
+    head: "Administration & Security",
+    para: "Review of school administration systems, security structures and SOP operations.",
+  },
+  {
+    icon: FaTelegramPlane,
+    head: "360° Academic Platform",
+    para: "Partner onboarding on our 360° Academic Enhancement Platform (Telegram).",
+  },
+  {
+    icon: FaHeart,
+    head: "Pastoral Overview",
+    para: "Student and staff welfare systems, including pastoral care and support structures.",
   },
 ];
 
@@ -83,7 +147,17 @@ export const ventures = [
   },
   {
     icon: FaBullhorn,
-    title: "School Marketing",
+    title: "Social Media/physical Marketing",
     desc: "Social media and physical marketing strategies for school growth.",
+  },
+  {
+    icon: FaSchool,
+    title: "Full School Management / Leadership Service",
+    desc: "Comprehensive management and leadership of schools, ensuring operational excellence and academic success.",
+  },
+  {
+    icon: FaBuilding,
+    title: "School Establishment",
+    desc: "Complete school setup and leadership services for Preschool, Nursery, Primary and College institutions.",
   },
 ];

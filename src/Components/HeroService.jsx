@@ -11,36 +11,63 @@ export default function HeroService() {
 
                 {/* HERO SECTION */}
 
-                <section className=" text-white" style={{ backgroundImage: `url(${logo})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className="bg-gradient-to-b from-[#01016ef5] from-15% via-[#ffffffe4] to-transparent md:bg-gradient-to-r py-20 h-[70vh]">
-                        <div className="max-w-370 mx-auto px-6 md:px-0">
+                <section
+                    className="text-white"
+                    style={{
+                        backgroundImage: `url(${logo})`,
+                        backgroundRepeat: "no-repeat",
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                    }}
+                >
+                    <div className="hidden sm:block bg-gradient-to-b from-[#10003f] from-15% md:via-[#ffffffe4] to-transparent md:bg-gradient-to-r md:from15% py-16 md:py-20 min-h-[60vh] md:h-[70vh]">
 
-                            <h1 className="text-4xl md:text-6xl font-bold mt-14 mb-4">
-                                Partnership & <span className='text-[#01016ef5]'>Venture Services</span>
+                        <div className="max-w-full lg:max-w-370 mx-auto px-6 md:px-0">
+
+                            <h1 className="text-6xl md:text-5xl lg:text-6xl font-bold mt-10 md:mt-14 mb-4">
+                                Partnership &{" "}
+                                <span className="text-[#0c0c0cf5]">Venture Services</span>
                             </h1>
 
-                            <p className="font-bold text-[30px] text-gray-200 max-w-xl">
+                            <p className="font-bold text-[30px] md:text-2xl lg:text-[30px] md:text-gray-200 max-w-xl text-[#ffffff]">
                                 Empowering Schools for Lasting Excellence and Growth
                             </p>
+
                         </div>
                     </div>
                 </section>
 
-                <div className='absolute top-4.5 -right-15 rounded-[20px]'>
-                    <img src={supposedSVG} alt="" className='w-185' />
+
+                {/* IMAGE (ONLY LARGE SCREENS) */}
+
+                <div className="hidden lg:block absolute top-10 -right-15 rounded-[20px]">
+                    <img src={supposedSVG} alt="" className="w-174" />
                 </div>
 
 
                 {/* PARTNERSHIP SERVICES */}
 
-                <div className='flex flex-row md:absolute md:top-90 md:left-13.5 max-w-370 mx-auto'>
-                    <section className="max-w-230 mx-auto px-6 py-20 md:py-5 md:bg-gradient-to-b from-[#fffffff5] from-80% to-transparent rounded-[20px]">
+                <div
+                    className="
+                    flex flex-col 
+                    lg:flex-row 
+                    relative 
+                    lg:absolute lg:top-90 lg:left-13.5 
+                    max-w-full lg:max-w-370 
+                    mx-auto 
+                    mt-10 md:mt-16 lg:mt-0
+                    "
+                >
 
-                        <h2 className="text-5xl font-bold mb-12 text-center">
+                    {/* LEFT SIDE */}
+
+                    <section className="w-full lg:max-w-230 mx-auto px-6 py-16 md:py-5 md:bg-gradient-to-b from-[#fffffff5] from-80% to-transparent rounded-[20px]">
+
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-12 text-center">
                             OUR PARTNERSHIP SERVICE
                         </h2>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
                             {HeroServiceData.map((service, index) => {
                                 const Icon = service.icon;
@@ -48,35 +75,54 @@ export default function HeroService() {
                                 return (
                                     <div
                                         key={index}
-                                        className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
+                                        className="bg-white rounded-xl shadow-md p-6 px-5 hover:shadow-lg transition"
                                     >
-
                                         <Icon className="text-red-600 text-3xl mb-4" />
 
-                                        <h3 className="text-xl font-semibold mb-2">
+                                        <h3 className="text-lg md:text-xl font-semibold mb-2">
                                             {service.title}
                                         </h3>
 
                                         <p className="text-gray-600 text-sm">
                                             {service.desc}
                                         </p>
-
                                     </div>
                                 );
                             })}
 
                         </div>
-
                     </section>
 
-                    <div className='flex flex-col justify-end'>
-                        <div className='w-full grid md:grid-cols-2 gap-5 py-5'>
-                            {HeroServiceOtherData.map((props, index) => (
-                                <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition bg-white">
-                                    <p className="text-xl font-semibold mb-2">{props.head}</p>
-                                    <p className="text-gray-600 text-sm">{props.para}</p>
-                                </div>
-                            ))}
+
+                    {/* RIGHT SIDE */}
+
+                    <div className="flex flex-col justify-end mt-6 lg:mt-0 px-6 lg:px-0">
+
+                        <div className="w-full grid sm:grid-cols-2 gap-5 py-5">
+
+                            {HeroServiceOtherData.map((props, index) => {
+                                const Icon = props.icon;
+
+                                return (
+                                    <div
+                                        key={index}
+                                        className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
+                                    >
+                                        {Icon && (
+                                            <Icon className="text-red-600 text-3xl mb-4" />
+                                        )}
+
+                                        <p className="text-lg md:text-xl font-semibold mb-2">
+                                            {props.head}
+                                        </p>
+
+                                        <p className="text-gray-600 text-sm">
+                                            {props.para}
+                                        </p>
+                                    </div>
+                                );
+                            })}
+
                         </div>
                     </div>
 
@@ -86,15 +132,15 @@ export default function HeroService() {
 
                 {/* VENTURES SECTION */}
 
-                <section className="bg-white py-20 mt-90">
+                <section className="bg-white py-16 md:py-20 mt-16 lg:mt-220">
 
                     <div className="max-w-7xl mx-auto px-6">
 
-                        <h2 className="text-3xl font-bold mb-12 text-center">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-10 md:mb-12 text-center">
                             OUR VENTURES
                         </h2>
 
-                        <div className="grid md:grid-cols-2 gap-8">
+                        <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
 
                             {ventures.map((venture, index) => {
                                 const Icon = venture.icon;
@@ -104,11 +150,9 @@ export default function HeroService() {
                                         key={index}
                                         className="flex gap-4 bg-gray-50 p-6 rounded-xl shadow-sm"
                                     >
-
                                         <Icon className="text-red-600 text-2xl mt-1" />
 
                                         <div>
-
                                             <h3 className="font-semibold text-lg">
                                                 {venture.title}
                                             </h3>
@@ -116,9 +160,7 @@ export default function HeroService() {
                                             <p className="text-gray-600 text-sm">
                                                 {venture.desc}
                                             </p>
-
                                         </div>
-
                                     </div>
                                 );
                             })}
@@ -132,11 +174,11 @@ export default function HeroService() {
 
                 {/* CTA SECTION */}
 
-                <section className="bg-[#1e2f4f] text-white py-16">
+                <section className="bg-[#090024] text-white py-16">
 
                     <div className="max-w-4xl mx-auto text-center px-6">
 
-                        <h2 className="text-3xl font-bold mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold mb-4">
                             Partner With The Inspectorate
                         </h2>
 
@@ -145,7 +187,7 @@ export default function HeroService() {
                             and sustainable institutional growth.
                         </p>
 
-                        <div className="flex justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
 
                             <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
                                 Request Inspection
