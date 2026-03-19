@@ -10,7 +10,7 @@ export default function Nav() {
         { name: "About us", path: "/" },
         { name: "Our School Inspection Framework", path: "/" },
         { name: "Services", path: "/services" },
-        { name: "Contact", path: "/" }
+        { name: "Contact", path: "/contact" }
     ];
 
     return (
