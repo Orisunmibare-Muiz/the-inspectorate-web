@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { HeroSlideData } from '../Data/HeroSlideData'
 import logoHero from '/logo.png'
+import ChooseUs from './ChooseUs'
 
 export default function Hero() {
 
@@ -71,6 +72,7 @@ export default function Hero() {
                     </div>
                 </section>
 
+
                 {/* Framework Section */}
                 <div className="px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
 
@@ -122,6 +124,10 @@ export default function Hero() {
 
                     </div>
                 </div>
+
+                <ChooseUs />
+
+
 
                 {/* Stats Section */}
                 <section className="px-12 py-16">
