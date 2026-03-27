@@ -20,13 +20,13 @@ export default function HeroService() {
                         backgroundPosition: "center",
                     }}
                 >
-                    <div className="hidden sm:block bg-gradient-to-b from-[#10003f] from-15% md:via-[#ffffffe4] to-transparent md:bg-gradient-to-r md:from15% py-16 md:py-20 min-h-[60vh] md:h-[70vh]">
+                    <div className="hidden sm:block bg-gradient-to-b from-[#10003f] from-15% to-transparent md:bg-gradient-to-r md:from15% py-16 md:py-20 min-h-[60vh] md:h-[70vh]">
 
                         <div className="max-w-full lg:max-w-370 mx-auto px-6 md:px-0">
 
                             <h1 className="text-6xl md:text-5xl lg:text-6xl font-bold mt-10 md:mt-14 mb-4">
                                 Partnership &{" "}
-                                <span className="text-[#0c0c0cf5]">Venture Services</span>
+                                <span className="text-[white]">Venture Services</span>
                             </h1>
 
                             <p className="font-bold text-[30px] md:text-2xl lg:text-[30px] md:text-gray-200 max-w-xl text-[#ffffff]">
@@ -64,7 +64,7 @@ export default function HeroService() {
                     <section className="w-full lg:max-w-230 mx-auto px-6 py-16 md:py-5 md:bg-gradient-to-b from-[#fffffff5] from-80% to-transparent rounded-[20px]">
 
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-12 text-center">
-                            OUR PARTNERSHIP SERVICE
+                            OUR PARTNERSHIP SERVICES
                         </h2>
 
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -190,7 +190,7 @@ export default function HeroService() {
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
 
                             <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
-                                Request Inspection
+                                REQUEST PARTNERSHIP
                             </button>
 
                             <button className="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#1e2f4f] transition">
