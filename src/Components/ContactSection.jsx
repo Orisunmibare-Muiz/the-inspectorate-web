@@ -71,7 +71,7 @@ export default function ContactSession() {
                             <ContactCard
                                 icon={FaClock}
                                 title="Business Hours"
-                                text="Monday – Friday, 7:30am – 4:00pm"
+                                text="Monday – Friday, 7:00am – 4:30pm"
                             />
 
                         </div>
