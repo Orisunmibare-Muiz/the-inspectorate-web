@@ -40,19 +40,19 @@ export default function Footer() {
 
                             <li>
                                 <a href="/about" className="hover:text-red-400 transition">
-                                    About The Inspector
+                                    About Us
                                 </a>
                             </li>
 
                             <li>
-                                <a href="/services" className="hover:text-red-400 transition">
+                                <a href="/gallery" className="hover:text-red-400 transition">
+                                    Gallery
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/seervices" className="hover:text-red-400 transition">
                                     Services
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="/testimonials" className="hover:text-red-400 transition">
-                                    Testimonials
                                 </a>
                             </li>
 
