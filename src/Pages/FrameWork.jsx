@@ -1,10 +1,10 @@
 import React from 'react'
-import Framework from '../Components/SectionOne'
+import Section from '../Components/Section'
 
 export default function FrameWork() {
   return (
     <>
-    <Framework />
+    <Section />
     </>
   )
 }
