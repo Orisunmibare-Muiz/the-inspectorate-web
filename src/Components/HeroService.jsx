@@ -40,8 +40,8 @@ export default function HeroService() {
 
                 {/* IMAGE (ONLY LARGE SCREENS) */}
 
-                <div className="hidden lg:block absolute top-10 -right-15 rounded-[20px]">
-                    <img src={supposedSVG} alt="" className="w-174" />
+                <div className="hidden lg:block absolute top-18 -right-1 rounded-[20px]">
+                    <img src={supposedSVG} alt="" className="w-179" />
                 </div>
 
 

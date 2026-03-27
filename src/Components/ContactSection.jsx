@@ -13,11 +13,11 @@ import {
 export default function ContactSession() {
     return (
         <>
-            <div className="bg-gray-50">
+            <div className="bg-gray-50 mt-16">
 
                 {/* HERO-CONTACT */}
 
-                <section className="bg-[#090024] text-white py-16">
+                <section className="bg-[#090024] text-white py-5">
                     <div className="max-w-full lg:max-w-370 mx-auto px-6 text-center">
 
                         <h1 className="text-3xl md:text-5xl font-bold mb-4">

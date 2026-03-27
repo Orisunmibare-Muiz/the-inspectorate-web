@@ -7,8 +7,8 @@ export default function Nav() {
 
     const menuItems = [
         { name: "Home", path: "/" },
-        { name: "About us", path: "/" },
-        { name: "Our School Inspection Framework", path: "/" },
+        { name: "About us", path: "/about" },
+        { name: "Gallery", path: "/gallery" },
         { name: "Services", path: "/services" },
         { name: "Contact", path: "/contact" }
     ];
