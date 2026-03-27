@@ -73,34 +73,19 @@ export const HeroServiceData = [
     icon: FaTools,
     title: "Teacher & Student Resources",
     desc: "Provision and advisory on essential teaching and learning resources.",
-  },
-  {
-    icon: FaTelegramPlane,
-    title: "360° Academic Platform",
-    desc: "Partner onboarding on our 360° Academic Enhancement Platform (Telegram).",
-  },
-  {
-    icon: FaHeart,
-    title: "Pastoral Overview",
-    desc: "Student and staff welfare systems, including pastoral care and support structures.",
-  },
+  }
 ];
 
 export const HeroServiceOtherData = [
   {
     icon: FaBalanceScale,
     head: "Regulatory Compliance Audit",
-    para: "Support and guidance to ensure schools meet regulatory requirements.",
-  },
-  {
-    icon: FaHandsHelping,
-    head: "Regulatory Compliance Audit",
-    para: "Support and guidance to ensure schools meet regulatory requirements.",
+    para: "Audit and support to ensure full compliance with educational regulatory bodies.",
   },
   {
     icon: FaShieldAlt,
     head: "Regulatory Compliance",
-    para: "Audit and support to ensure full compliance with educational regulatory bodies.",
+    para: "Support and guidance to ensure schools meet regulatory requirements.",
   },
   {
     icon: FaCogs,
@@ -142,7 +127,7 @@ export const ventures = [
   },
   {
     icon: FaUserTie,
-    title: "Interim School Leadership",
+    title: "Interim School Leadership  (for sudden departure of school heads)",
     desc: "Temporary leadership placement during transitions.",
   },
   {
