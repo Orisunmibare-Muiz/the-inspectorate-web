@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaEnvelope, FaPhoneAlt, FaWhatsapp, FaMapMarkerAlt } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -33,33 +34,33 @@ export default function Footer() {
 
                         <ul className="space-y-3">
                             <li>
-                                <a href="/" className="hover:text-red-400 transition">
+                                <Link to="/" className="hover:text-red-400 transition">
                                     Home
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a href="/about" className="hover:text-red-400 transition">
+                                <Link to="/about" className="hover:text-red-400 transition">
                                     About Us
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a href="/gallery" className="hover:text-red-400 transition">
+                                <Link to="/gallery" className="hover:text-red-400 transition">
                                     Gallery
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a href="/seervices" className="hover:text-red-400 transition">
+                                <Link to="/services" className="hover:text-red-400 transition">
                                     Services
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
-                                <a href="/contact" className="hover:text-red-400 transition">
+                                <Link to="/contact" className="hover:text-red-400 transition">
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
