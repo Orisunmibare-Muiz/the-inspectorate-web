@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaCheckCircle, FaSchool, FaAward } from "react-icons/fa"
 import CEO from '/Professional-person .png'
+import { Link } from 'react-router-dom'
 
 export default function AboutSectionOne() {
     return (
@@ -54,7 +55,7 @@ export default function AboutSectionOne() {
                                     </p>
 
                                     <p className="text-gray-600 mt-3 leading-relaxed">
-                                       His experience has seen him work as an English Language Teacher, Vice Principal, Principal, Regional Manager (Education Management), School Inspector, Consultant and Quality Assurance Expert.
+                                        His experience has seen him work as an English Language Teacher, Vice Principal, Principal, Regional Manager (Education Management), School Inspector, Consultant and Quality Assurance Expert.
                                     </p>
 
                                     <p className="text-gray-600 mt-3 leading-relaxed">
@@ -137,12 +138,14 @@ export default function AboutSectionOne() {
                                 and continuous quality improvement.
                             </p>
 
-                            <button className="mt-6 bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition">
-                                REQUEST PARTNERSHIP
-                            </button>
+                            <Link to="/contact">
+                                <button className="mt-6 bg-red-600 text-white px-6 py-3 rounded-md hover:bg-red-700 transition">
+                                    REQUEST PARTNERSHIP
+                                </button>
+                            </Link>
 
                         </div>
-
+``
 
                         {/* IMAGE */}
                         <div>

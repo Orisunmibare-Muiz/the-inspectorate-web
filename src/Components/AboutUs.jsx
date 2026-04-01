@@ -41,7 +41,7 @@ export default function AboutUs() {
                         mb-4 lg:mb-5
                         text-center lg:text-left
                     ">
-                            Contact Us
+                            About Us
                         </p>
 
                         {/* Paragraphs */}
