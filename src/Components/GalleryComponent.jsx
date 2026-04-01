@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaTimes } from "react-icons/fa";
 import { categories, GalleryImages } from '../Data/GalleryImages';
 import image from '../../public/teacherStudent/CBT.jpg'
+import { Link } from 'react-router-dom';
 
 export default function GalleryComponent() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -18,7 +19,7 @@ export default function GalleryComponent() {
 
         {/* HERO */}
 
-        <section className="bg-[#090024] text-white py-16 text-center" style={{backgroundImage: `url(${image})`}}>
+        <section className="bg-[#090024] text-white py-16 text-center" style={{ backgroundImage: `url(${image})` }}>
           <div className="max-w-full lg:max-w-370 mx-auto px-6">
             <h1 className="text-3xl md:text-5xl font-bold mb-3">
               Gallery
@@ -143,9 +144,11 @@ export default function GalleryComponent() {
               Let us help you achieve quality assurance, compliance and growth.
             </p>
 
-            <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
-              Contact Us
-            </button>
+            <Link to={"/contact"}>
+              <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
+                Contact Us
+              </button>
+            </Link>
 
           </div>
 

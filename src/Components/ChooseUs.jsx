@@ -41,7 +41,7 @@ export default function ChooseUs() {
                             "
                                 >
 
-                                    <div className="mb-4 text-green-400 text-2xl">
+                                    <div className="mb-4 text-red-600 text-2xl">
                                         <FaCheckCircle />
                                     </div>
 

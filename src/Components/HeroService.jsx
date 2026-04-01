@@ -3,6 +3,7 @@ import { HeroServiceData, HeroServiceOtherData } from '../Data/HeroServiceData';
 import { ventures } from '../Data/HeroServiceData';
 import logo from '/logo.png'
 import supposedSVG from '/Professional-person .png'
+import { Link } from 'react-router-dom';
 
 export default function HeroService() {
     return (
@@ -40,7 +41,7 @@ export default function HeroService() {
 
                 {/* IMAGE (ONLY LARGE SCREENS) */}
 
-                <div className="hidden lg:block absolute top-18 -right-1 rounded-[20px]">
+                <div className="hidden lg:block absolute top-13 -right-1 rounded-[20px]">
                     <img src={supposedSVG} alt="" className="w-179" />
                 </div>
 
@@ -189,13 +190,17 @@ export default function HeroService() {
 
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
 
-                            <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
-                                REQUEST PARTNERSHIP
-                            </button>
+                            <Link to={"/contact"}>
+                                <button className="bg-red-600 px-6 py-3 rounded-md hover:bg-red-700 transition">
+                                    REQUEST PARTNERSHIP
+                                </button>
+                            </Link>
 
-                            <button className="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#1e2f4f] transition">
-                                Contact Us
-                            </button>
+                            <Link to={"/contact"}>
+                                <button className="border border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#1e2f4f] transition">
+                                    Contact Us
+                                </button>
+                            </Link>
 
                         </div>
 
