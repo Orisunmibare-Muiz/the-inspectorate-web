@@ -1,6 +1,6 @@
 export const ChooseUsData = [
   {
-    title: "Quality Assurance",
+    title: "Academic Assurance",
     text: "Ensuring schools meet defined standards in teaching and administration.",
   },
   {
