@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { HeroSlideData } from '../Data/HeroSlideData'
 import logoHero from '/logo.png'
 import ChooseUs from './ChooseUs'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
 
@@ -15,12 +16,12 @@ export default function Hero() {
         return () => {
             clearInterval(slide)
         }
-    }, [])
+    }, [HeroSlideData.length]) // ⁉️⁉️ remember to re-study
 
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 mt-17">
+            <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 text-gray-800 mt-16">
 
                 {/* Hero Section */}
                 <section className="relative h-screen overflow-hidden">
@@ -29,7 +30,7 @@ export default function Hero() {
                     {HeroSlideData.map((slide, index) => (
                         <div
                             key={index}
-                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-2000 ease-in-out
+                            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1500 ease-in-out
                             ${index === heroSlide ? "opacity-100" : "opacity-0"}`}
                             style={{ backgroundImage: `url(${slide.image})` }}
                         />
@@ -59,12 +60,18 @@ export default function Hero() {
 
                             {/* Buttons */}
                             <div className="mt-6 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                                <button className="bg-red-600 text-white px-15 py-3 rounded-md font-semibold hover:bg-red-700 transition w-full sm:w-auto">
-                                    Request Partnership
-                                </button>
-                                <button className="border border-red-600 text-red-600 px-15 py-3 rounded-md font-semibold hover:bg-red-50 transition w-full sm:w-auto">
-                                    Learn More
-                                </button>
+
+                                <Link to={"/contact"}>
+                                    <button className="bg-red-600 text-white px-15 py-3 rounded-md font-semibold hover:bg-red-700 transition w-full sm:w-auto">
+                                        Request Partnership
+                                    </button>
+                                </Link>
+
+                                <Link to={"/about"}>
+                                    <button className="border border-red-600 text-red-600 px-15 py-3 rounded-md font-semibold hover:bg-red-50 transition w-full sm:w-auto">
+                                        Learn More
+                                    </button>
+                                </Link>
                             </div>
 
                         </div>
