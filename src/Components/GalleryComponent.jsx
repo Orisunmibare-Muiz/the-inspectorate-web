@@ -3,6 +3,7 @@ import { FaTimes } from "react-icons/fa";
 import { categories, GalleryImages } from '../Data/GalleryImages';
 import image from '../../public/teacherStudent/CBT.jpg'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function GalleryComponent() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -61,7 +62,7 @@ export default function GalleryComponent() {
           <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
 
             {filteredImages.map((img, index) => (
-              <div
+              <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
                 key={index}
                 className="relative overflow-hidden rounded-xl cursor-pointer group"
                 onClick={() => setSelectedIndex(index)}
@@ -75,7 +76,7 @@ export default function GalleryComponent() {
                 {/* HOVER OVERLAY */}
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition"></div>
 
-              </div>
+              </motion.div>
             ))}
 
           </div>

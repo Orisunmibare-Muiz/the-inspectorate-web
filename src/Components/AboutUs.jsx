@@ -1,5 +1,6 @@
 import React from 'react'
 import Bag from "/Bag.svg"
+import { motion } from 'framer-motion'
 
 export default function AboutUs() {
     return (
@@ -15,13 +16,12 @@ export default function AboutUs() {
                 mt-10 lg:mt-16
             ">
 
-                    {/* Text Container */}
-                    <div className="
-                    outline outline-1 outline-white
+                {/* Text Container */}
+                <motion.div className="
                     h-full w-full
                     p-6 sm:p-10 lg:p-15
                     relative
-                    ">
+                    " initial={{ opacity: 0, y: 90 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} viewport={{ once: true, amount: 0.5 }}>
 
                         {/* Image */}
                         <img
@@ -39,8 +39,7 @@ export default function AboutUs() {
                         text-white font-bold
                         text-2xl sm:text-3xl md:text-4xl lg:text-[50px]
                         mb-4 lg:mb-5
-                        text-center lg:text-left
-                    ">
+                        text-center lg:text-left">
                             About Us
                         </p>
 
@@ -61,9 +60,9 @@ export default function AboutUs() {
                             Our school Inspection framework moves far beyond simple 'fault-finding', to providing your leadership team with a data-driven roadmap for pedagogical excellence, administrative efficiency and total instructional growth.
                         </p>
 
-                    </div>
-                </div>
+                </motion.div>
             </div>
+        </div >
         </>
     )
 }

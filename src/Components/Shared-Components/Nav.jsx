@@ -20,7 +20,7 @@ export default function Nav() {
 
                 <div className="flex items-center justify-between h-16">
 
-                    {/* Logo */} 
+                    {/* Logo */}
                     <Link to="/" className="flex items-center gap-2">
                         <img
                             src={logo}
@@ -83,9 +83,11 @@ export default function Nav() {
                             </a>
                         ))}
 
-                        <button className="bg-red-600 text-white px-4 py-2 rounded-md w-full">
-                            REQUEST INSPECTION
-                        </button>
+                        <a href="#contact" onClick={() => setMenuOpen(false)}>
+                            <button className="bg-red-600 text-white px-4 py-2 rounded-md w-full">
+                                REQUEST INSPECTION
+                            </button>
+                        </a>
 
                     </div>
 

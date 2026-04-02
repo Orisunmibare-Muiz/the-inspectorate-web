@@ -1,11 +1,12 @@
 import React from 'react'
 import { FaCheckCircle } from "react-icons/fa";
 import { ChooseUsData } from '../Data/ChooseUsData';
+import {motion} from 'framer-motion'
 
 export default function ChooseUs() {
     return (
         <>
-            <div className='h-full w-full'>
+            <motion.div className='h-full w-full' initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
                 <section className="lg:max-w-370 mx-auto rounded-[10px] bg-[] py-20">
 
                     <div className="max-w-full lg:max-w-370 mx-auto px-6">
@@ -60,7 +61,7 @@ export default function ChooseUs() {
 
                     </div>
                 </section>
-            </div>
+            </motion.div>
         </>
     )
 }

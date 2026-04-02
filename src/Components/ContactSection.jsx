@@ -9,6 +9,7 @@ import {
     FaCalendarAlt,
     FaHandshake
 } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 export default function ContactSession() {
     // Form state variables
@@ -106,7 +107,7 @@ export default function ContactSession() {
 
                         {/* LEFT SIDE */}
 
-                        <div className="space-y-5">
+                        <motion.div className="space-y-5" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                             <h2 className="text-2xl font-bold mb-4">Get In Touch</h2>
 
@@ -140,12 +141,12 @@ export default function ContactSession() {
                                 text="Monday – Friday, 7:00am – 4:30pm"
                             />
 
-                        </div>
+                        </motion.div>
 
 
                         {/* RIGHT SIDE FORM */}
 
-                        <div className="bg-white p-6 rounded-xl shadow-md">
+                        <motion.div className="bg-white p-6 rounded-xl shadow-md" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                             <h2 className="text-2xl font-bold mb-6">
                                 Send Us a Message
@@ -220,7 +221,7 @@ export default function ContactSession() {
 
                             </form>
 
-                        </div>
+                        </motion.div>
 
                     </div>
 
@@ -231,7 +232,7 @@ export default function ContactSession() {
 
                 <section className="max-w-full lg:max-w-370 mx-auto px-6 pb-10">
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <motion.div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                         <ActionCard
                             icon={FaSearch}
@@ -248,7 +249,7 @@ export default function ContactSession() {
                             title="Partner With Us"
                         />
 
-                    </div>
+                    </motion.div>
 
                 </section>
 
@@ -257,7 +258,7 @@ export default function ContactSession() {
 
                 <section className="max-w-full lg:max-w-370 mx-auto px-6 pb-16">
 
-                    <div className="rounded-xl overflow-hidden shadow-md">
+                    <motion.div className="rounded-xl overflow-hidden shadow-md" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
                         <iframe
                             title="map"
                             src="https://maps.google.com/maps?q=Maryland%20Lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -265,7 +266,7 @@ export default function ContactSession() {
                             allowFullScreen=""
                             loading="lazy"
                         ></iframe>
-                    </div>
+                    </motion.div>
 
                 </section>
 
@@ -287,7 +288,7 @@ export default function ContactSession() {
                             </a>
 
                             <a href="mailto:orismuiz2003@gmail.com" className="flex items-center justify-center gap-2 border border-white px-6 py-3 rounded-md hover:bg-white hover:text-[#1e2f4f] transition">
-                                    <FaEnvelope /> Send Email
+                                <FaEnvelope /> Send Email
                             </a>
 
                         </div>

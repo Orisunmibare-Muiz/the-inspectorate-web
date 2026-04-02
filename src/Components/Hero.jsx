@@ -3,6 +3,7 @@ import { HeroSlideData } from '../Data/HeroSlideData'
 import logoHero from '/logo.png'
 import ChooseUs from './ChooseUs'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
 
@@ -16,7 +17,9 @@ export default function Hero() {
         return () => {
             clearInterval(slide)
         }
-    }, [HeroSlideData.length]) // ⁉️⁉️ remember to re-study
+    }, [HeroSlideData.length])
+
+
 
 
     return (
@@ -42,7 +45,9 @@ export default function Hero() {
                             background: 'linear-gradient(to right, #090024 25%, rgba(255,255,255,0) 100%)'
                         }}>
 
-                        <div className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
+                        <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 5}} viewport={{once: true}}
+
+                            className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
 
                             {/* Logo */}
                             <div className="mb-6">
@@ -74,14 +79,15 @@ export default function Hero() {
                                 </Link>
                             </div>
 
-                        </div>
+                        </motion.div>
 
                     </div>
+
                 </section>
 
 
                 {/* Framework Section */}
-                <div className="px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
+                <motion.div className="px-4 sm:px-8 lg:px-12 py-12 sm:py-16" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                     <div className="max-w-7xl mx-auto bg-[#e3e3e3] py-8 sm:py-10 px-4 sm:px-6 lg:px-10 rounded-lg  max-w-370 mx-auto">
 
@@ -130,14 +136,15 @@ export default function Hero() {
                         </div>
 
                     </div>
-                </div>
+
+                </motion.div>
 
                 <ChooseUs />
 
 
 
                 {/* Stats Section */}
-                <section className="px-12 py-16">
+                <motion.section className="px-12 py-16" initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 5}} viewport={{once: true, amount: 0.5}}>
                     <div className="grid md:grid-cols-3 gap-8 text-center moving-shadow-container max-w-370 z-20 mx-auto">
                         <div className=''>
                             <p className="text-5xl font-bold text-white">25<span className='text-red-500 text-[60px]'>+</span></p>
@@ -152,7 +159,7 @@ export default function Hero() {
                             <p className="mt-2 text-[white] font-bold">Educational Consultant</p>
                         </div>
                     </div>
-                </section>
+                </motion.section>
             </div>
         </>
     )

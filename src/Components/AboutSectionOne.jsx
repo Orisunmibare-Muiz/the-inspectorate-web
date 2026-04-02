@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCheckCircle, FaSchool, FaAward } from "react-icons/fa"
 import CEO from '/Professional-person .png'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function AboutSectionOne() {
     return (
@@ -11,13 +12,13 @@ export default function AboutSectionOne() {
                 <div className="max-w-full lg:max-w-370 mx-auto px-6">
 
                     {/* HEADER */}
-                    <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+                    <motion.h2 className="text-3xl md:text-5xl font-bold text-center mb-12" initial={{ opacity: 0, y: 90 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} viewport={{ once: true, amount: 0.5 }}>
                         About the Chief Inspector/CEO
-                    </h2>
+                    </motion.h2>
 
 
                     {/* MAIN CARD */}
-                    <div className="bg-white rounded-2xl shadow-md p-6 md:p-10">
+                    <motion.div className="bg-white rounded-2xl shadow-md p-6 md:p-10" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                         <div className="grid lg:grid-cols-3 gap-8">
 
@@ -118,11 +119,11 @@ export default function AboutSectionOne() {
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
                     {/* QUOTE + CTA */}
-                    <div className="mt-12 bg-white rounded-2xl shadow-md p-6 md:p-10 grid lg:grid-cols-2 gap-8 items-center">
+                    <motion.div className="mt-12 bg-white rounded-2xl shadow-md p-6 md:p-10 grid lg:grid-cols-2 gap-8 items-center" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                         {/* TEXT */}
                         <div>
@@ -145,7 +146,7 @@ export default function AboutSectionOne() {
                             </Link>
 
                         </div>
-``
+                        ``
 
                         {/* IMAGE */}
                         <div>
@@ -156,7 +157,7 @@ export default function AboutSectionOne() {
                             />
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </div>
             </section>

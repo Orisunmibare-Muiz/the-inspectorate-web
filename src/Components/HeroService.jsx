@@ -4,6 +4,7 @@ import { ventures } from '../Data/HeroServiceData';
 import logo from '/logo.png'
 import supposedSVG from '/Professional-person .png'
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function HeroService() {
     return (
@@ -74,7 +75,7 @@ export default function HeroService() {
                                 const Icon = service.icon;
 
                                 return (
-                                    <div
+                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
                                         key={index}
                                         className="bg-white rounded-xl shadow-md p-6 px-5 hover:shadow-lg transition"
                                     >
@@ -87,7 +88,7 @@ export default function HeroService() {
                                         <p className="text-gray-600 text-sm">
                                             {service.desc}
                                         </p>
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
 
@@ -105,7 +106,7 @@ export default function HeroService() {
                                 const Icon = props.icon;
 
                                 return (
-                                    <div
+                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
                                         key={index}
                                         className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
                                     >
@@ -120,7 +121,7 @@ export default function HeroService() {
                                         <p className="text-gray-600 text-sm">
                                             {props.para}
                                         </p>
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
 
@@ -135,7 +136,7 @@ export default function HeroService() {
 
                 <section className="bg-white py-16 md:py-20 mt-16 lg:mt-220">
 
-                    <div className="max-w-7xl mx-auto px-6">
+                    <motion.div className="max-w-7xl mx-auto px-6" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
 
                         <h2 className="text-2xl md:text-3xl font-bold mb-10 md:mb-12 text-center">
                             OUR VENTURES
@@ -168,7 +169,7 @@ export default function HeroService() {
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
                 </section>
 
