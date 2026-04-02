@@ -72,22 +72,20 @@ export default function Nav() {
 
                     <div className="flex flex-col px-4 py-4 space-y-4 text-sm font-medium">
 
-                        {menuItems.map((item, index) => (
-                            <a
+                        {menuItems.map((props, index) => (
+                            <Link
                                 key={index}
-                                href={item.path}
+                                to={props.path}
                                 className="hover:text-red-600"
                                 onClick={() => setMenuOpen(false)}
                             >
-                                {item.name}
-                            </a>
+                                {props.name}
+                            </Link>
                         ))}
 
-                        <a href="#contact" onClick={() => setMenuOpen(false)}>
-                            <button className="bg-red-600 text-white px-4 py-2 rounded-md w-full">
+                        <Link to="contact" onClick={() => setMenuOpen(false)} className="bg-red-600 text-white px-4 py-2 rounded-md w-full">
                                 REQUEST INSPECTION
-                            </button>
-                        </a>
+                        </Link>
 
                     </div>
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaTimes } from "react-icons/fa";
 import { categories, GalleryImages } from '../Data/GalleryImages';
-import image from '../../public/teacherStudent/CBT.jpg'
+import image from '/teacherStudent/CBT.jpg'
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
