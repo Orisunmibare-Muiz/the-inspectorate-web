@@ -53,7 +53,7 @@ export default function Footer() {
 
                             <li>
                                 <Link to="/services" className="hover:text-red-400 transition">
-                                    Services
+                                    Serva
                                 </Link>
                             </li>
 
@@ -89,24 +89,30 @@ export default function Footer() {
 
                             <li className="flex items-start gap-3">
                                 <FaEnvelope className="text-red-500 mt-1" />
-                                <span>info@theinspectorate.com</span>
+                                <a href="mailto:info@theinspectorate.com" className="hover:text-red-400 transition">
+                                    info@theinspectorate.com
+                                </a>
                             </li>
 
                             <li className="flex items-start gap-3">
                                 <FaPhoneAlt className="text-red-500 mt-1" />
-                                <span>+2347078058012</span>
+                                <a href="tel:+2347078058012" className="hover:text-red-400 transition">
+                                    +2347078058012
+                                </a>
                             </li>
 
                             <li className="flex items-start gap-3">
                                 <FaWhatsapp className="text-red-500 mt-1" />
-                                <span>09059592823</span>
+                                <a href="tel:09059592823" className="hover:text-red-400 transition">
+                                    09059592823
+                                </a>
                             </li>
 
                             <li className="flex items-start gap-3">
                                 <FaMapMarkerAlt className="text-red-500 mt-1" />
-                                <span>
+                                <a href="https://maps.google.com/?q=19B+Mobolaji+Bank+Anthony+Way,+Maryland,+Lagos" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition">    
                                     19B Mobolaji Bank Anthony Way, Maryland, Lagos
-                                </span>
+                                </a>
                             </li>
 
                         </ul>

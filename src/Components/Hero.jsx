@@ -45,7 +45,7 @@ export default function Hero() {
                             background: 'linear-gradient(to right, #090024 25%, rgba(255,255,255,0) 100%)'
                         }}>
 
-                        <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 5}} viewport={{once: true}}
+                        <motion.div initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 4}} viewport={{once: true}}
 
                             className="max-w-[700px] w-full flex flex-col items-center md:justify-start text-center md:text-left">
 

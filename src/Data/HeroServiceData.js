@@ -69,11 +69,6 @@ export const HeroServiceData = [
     title: "Staff Appraisal",
     desc: "Comprehensive staff evaluation systems to improve performance and accountability.",
   },
-  {
-    icon: FaTools,
-    title: "Teacher & Student Resources",
-    desc: "Provision and advisory on essential teaching and learning resources.",
-  }
 ];
 
 export const HeroServiceOtherData = [
@@ -102,6 +97,11 @@ export const HeroServiceOtherData = [
     head: "Pastoral Overview",
     para: "Student and staff welfare systems, including pastoral care and support structures.",
   },
+  {
+    icon: FaTools,
+    head: "Teacher & Student Resources",
+    para: "Provision and advisory on essential teaching and learning resources.",
+  }
 ];
 
 export const ventures = [

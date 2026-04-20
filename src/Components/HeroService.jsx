@@ -42,8 +42,8 @@ export default function HeroService() {
 
                 {/* IMAGE (ONLY LARGE SCREENS) */}
 
-                <div className="hidden lg:block absolute top-13 -right-1 rounded-[20px]">
-                    <img src={supposedSVG} alt="" className="w-179" />
+                <div className="hidden lg:block absolute top-7 right-10 rounded-[20px]">
+                    <img src={supposedSVG} alt="" className="w-174" />
                 </div>
 
 
@@ -54,7 +54,7 @@ export default function HeroService() {
                     flex flex-col 
                     lg:flex-row 
                     relative 
-                    lg:absolute lg:top-90 lg:left-13.5 
+                    lg:absolute lg:top-80 lg:left-13.5 
                     max-w-full lg:max-w-370 
                     mx-auto 
                     mt-10 md:mt-16 lg:mt-0
@@ -63,19 +63,19 @@ export default function HeroService() {
 
                     {/* LEFT SIDE */}
 
-                    <section className="w-full lg:max-w-230 mx-auto px-6 py-16 md:py-5 md:bg-gradient-to-b from-[#fffffff5] from-80% to-transparent rounded-[20px]">
+                    <section className="w-full lg:max-w-230 mx-auto px-6 py-16 md:py-0 lg:mt-15 md:bg-gradient-to-b from-[#ffffff] from-80% to-transparent lg:mb-5 rounded-[20px]">
 
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 md:mb-12 text-center">
+                        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-10 md:mb-0 text-center lg:mt-15">
                             OUR PARTNERSHIP SERVICES
                         </h2>
 
-                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:mt-26 md:w-[800px]">
 
                             {HeroServiceData.map((service, index) => {
                                 const Icon = service.icon;
 
                                 return (
-                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
+                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 1}} viewport={{once: true, amount: 0.5}}
                                         key={index}
                                         className="bg-white rounded-xl shadow-md p-6 px-5 hover:shadow-lg transition"
                                     >
@@ -98,15 +98,15 @@ export default function HeroService() {
 
                     {/* RIGHT SIDE */}
 
-                    <div className="flex flex-col justify-end mt-6 lg:mt-0 px-6 lg:px-0">
+                    <div className="flex flex-col justify-end mt-6 lg:mt-96.5 px-6 lg:px-0 lg:mb-5">
 
-                        <div className="w-full grid sm:grid-cols-2 gap-5 py-5">
+                        <div className="w-full grid sm:grid-cols-2 gap-5 py-0 px-5 md:pl-0">
 
                             {HeroServiceOtherData.map((props, index) => {
                                 const Icon = props.icon;
 
                                 return (
-                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}
+                                    <motion.div initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 1}} viewport={{once: true, amount: 0.5}}
                                         key={index}
                                         className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
                                     >
@@ -136,7 +136,7 @@ export default function HeroService() {
 
                 <section className="bg-white py-16 md:py-20 mt-16 lg:mt-220">
 
-                    <motion.div className="max-w-7xl mx-auto px-6" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 2}} viewport={{once: true, amount: 0.5}}>
+                    <motion.div className="max-w-7xl mx-auto px-6" initial={{opacity: 0, y: 90}} whileInView={{opacity: 1, y:0}} transition={{duration: 1}} viewport={{once: true, amount: 0.5}}>
 
                         <h2 className="text-2xl md:text-3xl font-bold mb-10 md:mb-12 text-center">
                             OUR VENTURES
@@ -150,7 +150,7 @@ export default function HeroService() {
                                 return (
                                     <div
                                         key={index}
-                                        className="flex gap-4 bg-gray-50 p-6 rounded-xl shadow-sm"
+                                        className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition"
                                     >
                                         <Icon className="text-red-600 text-2xl mt-1" />
 
